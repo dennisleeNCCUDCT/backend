@@ -53,7 +53,7 @@ function CouponsModal({ closeModal, getCoupons, type, tempCoupon }) {
       const res = await axios[method](api, {
         data: { ...tempData, due_date: date.getTime() },
       });
-
+      console.log(res);
       alert("加入/修改產品成功！");
       closeModal();
       getCoupons();

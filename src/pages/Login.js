@@ -26,7 +26,7 @@ function Login() {
         `/v2/api/${process.env.REACT_APP_API_PATH}/admin/products/all`
       );
       document.cookie = `hextoken=${token}; expires=${new Date(expired)};  `;
-      // console.log(productRes);
+      console.log(productRes);
       if (res.data.success) {
         navigate("/admin/products");
       }
